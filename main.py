@@ -87,12 +87,11 @@ def main():
     messagebox.showinfo('Info', 'AllahGuardSerialChecker will now check for a serial key.'
                                 'Please donate to our open source project!')
     try:
-        reg_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, 'Software\\MicroAndSoft')
-        value, _ = winreg.QueryValueEx(reg_key, 'serial_key')
+        # key = get_key()
     except FileNotFoundError:
         error = 'Serial key not found'
     if not error:
-        error = ppap(value)
+        error = ppap(key)
     if error:
         # Hide the root TK window
         root = tk.Tk()
