@@ -87,7 +87,10 @@ def main():
     messagebox.showinfo('Info', 'AllahGuardSerialChecker will now check for a serial key.'
                                 'Please donate to our open source project!')
     try:
+        # I'm not sure where on the system we expect the key to be saved. 
+        # We might go back to an idea I had in the past.
         # key = get_key()
+        pass
     except FileNotFoundError:
         error = 'Serial key not found'
     if not error:
